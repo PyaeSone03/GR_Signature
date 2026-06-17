@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
     --font-heading: var(--font-sans);
     --font-sans: var(--font-sans);
@@ -48,85 +46,163 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
+    --background: #F3BE65;
+    --foreground: #2D1B00;
+    --card: #ffffff;
+    --card-foreground: #2D1B00;
+    --popover: #ffffff;
+    --popover-foreground: #2D1B00;
+    --primary: #F3BE65;
+    --primary-foreground: #2D1B00;
+    --secondary: #D4A04A;
+    --secondary-foreground: #2D1B00;
+    --muted: #f5f0eb;
+    --muted-foreground: #5C3D1A;
+    --accent: #F3BE65;
+    --accent-foreground: #2D1B00;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #D4A04A;
+    --input: #D4A04A;
+    --ring: #F3BE65;
     --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --chart-1: #F3BE65;
+    --chart-2: #D4A04A;
+    --chart-3: #B8832A;
+    --chart-4: #F8D49A;
+    --chart-5: #2D1B00;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #2D1B00;
+    --sidebar-primary: #F3BE65;
+    --sidebar-primary-foreground: #2D1B00;
+    --sidebar-accent: #F3BE65;
+    --sidebar-accent-foreground: #2D1B00;
+    --sidebar-border: #D4A04A;
+    --sidebar-ring: #F3BE65;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
+  
   body {
     @apply bg-background text-foreground;
-    }
+  }
+  
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
-    }
+  }
+  
   html {
     @apply font-sans;
-    }
+  }
+}
+
+@layer utilities {
+  /* ROYAL Signature Brand Colors */
+  .text-royal-gold {
+    color: #F3BE65;
+    text-shadow: 0 0 20px rgba(243, 190, 101, 0.3);
+  }
+  
+  .text-royal-dark {
+    color: #2D1B00;
+  }
+  
+  /* Custom gold colors - F3BE65 */
+  .bg-primary-custom {
+    background-color: #F3BE65;
+  }
+  
+  .text-primary-custom {
+    color: #F3BE65;
+  }
+  
+  .border-primary-custom {
+    border-color: #F3BE65;
+  }
+  
+  /* Gold gradient backgrounds */
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #F3BE65 0%, #D4A04A 50%, #B8832A 100%);
+  }
+  
+  .bg-gold-subtle {
+    background: linear-gradient(135deg, rgba(243, 190, 101, 0.1) 0%, rgba(212, 160, 74, 0.05) 100%);
+  }
+  
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #F3BE65 0%, #D4A04A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Glass morphism */
+  .glass-luxury {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(243, 190, 101, 0.3);
+  }
+  
+  .glass-royal {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(243, 190, 101, 0.15);
+  }
+  
+  /* Gold border glow */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(243, 190, 101, 0.3);
+  }
+  
+  .glow-gold-hover:hover {
+    box-shadow: 0 0 30px rgba(243, 190, 101, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  /* ROYAL Signature Text Styles */
+  .royal-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  
+  .royal-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f5f0eb;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #F3BE65;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4A04A;
+  }
+  
+  /* Font imports */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
 }

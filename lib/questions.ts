@@ -1,0 +1,52 @@
+export const QUESTIONS = [
+  {
+    id: "name",
+    type: "text",
+    text: "သင့်ရဲ့နာမည်",
+    placeholder: "Enter your full name",
+    required: true,
+  },
+  {
+    id: "age",
+    type: "single",
+    text: "အသက်အုပ်စု",
+    options: ["၁၈-၂၀", "၂၁-၃၀", "၃၁-၄၀", "၄၁-၅၀", "၅၁ အထက်"],
+    required: true,
+  },
+  {
+    id: "gender",
+    type: "single",
+    text: "ကျား/မ",
+    options: ["ကျား", "မ", "အခြား", "Prefer not to say"],
+    required: true,
+  },
+  {
+    id: "phone",
+    type: "text",
+    text: "ဖုန်းနံပါတ်",
+    placeholder: "e.g., 09XXXXXXXXX",
+    required: true,
+  },
+  {
+    id: "region",
+    type: "select",
+    text: "တိုင်းဒေသကြီး/ပြည်နယ်",
+    placeholder: "Select your state or region",
+    required: true,
+  },
+  {
+    id: "township",
+    type: "select",
+    text: "မြို့နယ်",
+    placeholder: "Select your township",
+    dependsOn: "region",
+    required: true,
+  },
+  {
+    id: "ward",
+    type: "text",
+    text: "ရပ်ကွက်/လမ်း",
+    placeholder: "Enter your ward number or street name",
+    required: false,
+  },
+];
