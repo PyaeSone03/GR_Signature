@@ -5,7 +5,10 @@ import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-const PRIMARY = "#f3bf655e";
+const PRIMARY = "#262F65";
+const PRIMARY_LIGHT = "#3A4590";
+const TEXT_GOLD = "#fcb335";
+const BORDER_COLOR = "rgba(252, 179, 53, 0.15)";
 
 interface AgeGateDialogProps {
   onConfirm: () => void;
@@ -14,20 +17,26 @@ interface AgeGateDialogProps {
 
 export function AgeGateDialog({ onConfirm, onDecline }: AgeGateDialogProps) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <div className="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl" style={{ backgroundColor: PRIMARY }}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+      <div 
+        className="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border" 
+        style={{ 
+          backgroundColor: PRIMARY,
+          borderColor: BORDER_COLOR
+        }}
+      >
         {/* Header */}
         <div className="flex flex-col items-center justify-center px-6 pt-8 pb-4">
           <div className="mb-3">
-            <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center">
-              <AlertTriangle size={32} className="text-black" />
+            <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(252, 179, 53, 0.1)' }}>
+              <AlertTriangle size={32} style={{ color: TEXT_GOLD }} />
             </div>
           </div>
-          <h2 className="text-xl font-light tracking-wider text-center text-black">
+          <h2 className="text-xl font-light tracking-wider text-center" style={{ color: TEXT_GOLD }}>
             AGE VERIFICATION
           </h2>
-          <div className="w-12 h-0.5 mt-2 bg-black" />
-          <p className="text-sm text-center mt-3 text-black/70">
+          <div className="w-12 h-0.5 mt-2" style={{ backgroundColor: TEXT_GOLD }} />
+          <p className="text-sm text-center mt-3" style={{ color: TEXT_GOLD }}>
             Please confirm you are 18 or older to continue.
           </p>
         </div>
@@ -38,19 +47,19 @@ export function AgeGateDialog({ onConfirm, onDecline }: AgeGateDialogProps) {
             onClick={onConfirm}
             className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:scale-[1.02]"
             style={{
-              backgroundColor: "black",
-              color: "#f3bf65",
+              backgroundColor: TEXT_GOLD,
+              color: PRIMARY,
             }}
           >
             YES, I'M 18 OR OLDER
           </button>
           <button
             onClick={onDecline}
-            className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:bg-black/5"
+            className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:bg-white/5"
             style={{
               backgroundColor: "transparent",
-              color: "black",
-              border: `1px solid black`,
+              color: TEXT_GOLD,
+              border: `1px solid ${BORDER_COLOR}`,
             }}
           >
             No, take me back

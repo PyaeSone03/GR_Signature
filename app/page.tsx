@@ -9,10 +9,14 @@ import { ThanksDialog } from "@/components/dialogs/ThanksDialog";
 import { QuestionCard } from "@/components/survey/QuestionCard";
 import { REGIONS_AND_STATES } from "@/lib/myanmar-data";
 
-const PRIMARY = "#F3BE65";
-const PRIMARY_DARK = "#D4A04A";
-const TEXT_DARK = "#000000";
-const TEXT_LIGHT = "#6B7280";
+const PRIMARY = "#262F65";
+const PRIMARY_DARK = "#1A214A";
+const PRIMARY_LIGHT = "#3A4590";
+const CARD_BG = "#2A346B";
+const CARD_BG_HOVER = "#323D7A";
+const BORDER_COLOR = "rgba(252, 179, 53, 0.12)";
+const PROGRESS_BG = "rgba(252, 179, 53, 0.15)";
+const TEXT_GOLD = "#fcb335";
 
 const QUESTIONS = [
   {
@@ -38,24 +42,17 @@ const QUESTIONS = [
   },
   {
     id: "phone",
-    type: "text",
+    type: "phone",
     text: "ဖုန်းနံပါတ်",
-    placeholder: "ဥပမာ - ၀၉XXXXXX X",
+    placeholder: "09XXXXXXXX",
     required: true,
   },
   {
-    id: "region",
-    type: "select",
-    text: "ပြည်နယ် / တိုင်း",
-    placeholder: "သင့်ပြည်နယ် သို့မဟုတ် တိုင်းကို ရွေးချယ်ပါ",
-    required: true,
-  },
-  {
-    id: "township",
-    type: "select",
-    text: "မြို့နယ်",
-    placeholder: "သင့်မြို့နယ်ကို ရွေးချယ်ပါ",
-    dependsOn: "region",
+    id: "location",
+    type: "location",
+    text: "သင့်ဒေသ",
+    regionPlaceholder: "ပြည်နယ် / တိုင်း ရွေးချယ်ပါ",
+    townshipPlaceholder: "မြို့နယ် ရွေးချယ်ပါ",
     required: true,
   },
 ];
@@ -64,7 +61,7 @@ export default function SurveyLanding() {
   const router = useRouter();
   const [ageVerified, setAgeVerified] = useState(false);
   const [declined, setDeclined] = useState(false);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState<Record<string, any>>({});
   const [showThanksDialog, setShowThanksDialog] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [availableTownships, setAvailableTownships] = useState<string[]>([]);
@@ -93,7 +90,18 @@ export default function SurveyLanding() {
     return true;
   };
 
-  const answeredCount = QUESTIONS.filter(isAnswered).length;
+  // Special check for location question
+  const isLocationAnswered = () => {
+    return answers.region && answers.region !== "" && answers.township && answers.township !== "";
+  };
+
+  const answeredCount = QUESTIONS.filter((q) => {
+    if (q.id === "location") {
+      return isLocationAnswered();
+    }
+    return isAnswered(q);
+  }).length;
+  
   const allAnswered = answeredCount === QUESTIONS.length;
   const progress = answeredCount / QUESTIONS.length;
 
@@ -115,7 +123,7 @@ export default function SurveyLanding() {
   if (declined) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center" style={{ backgroundColor: PRIMARY }}>
-        <p style={{ color: TEXT_DARK }}>ဆက်လက်လုပ်ဆောင်ရန် အသက် ၁၈ နှစ်ပြည့်ပြီးဖြစ်ရပါမည်။ နားလည်ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။</p>
+        <p style={{ color: TEXT_GOLD }}>ဆက်လက်လုပ်ဆောင်ရန် အသက် ၁၈ နှစ်ပြည့်ပြီးဖြစ်ရပါမည်။ နားလည်ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။</p>
       </div>
     );
   }
@@ -132,87 +140,96 @@ export default function SurveyLanding() {
           <div className="flex flex-col items-center justify-center max-w-2xl mx-auto">
             <div className="mb-3">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-v2.png"
                 alt="Logo"
-                width={120}
+                width={160}
                 height={120}
                 className="object-contain"
                 priority
               />
             </div>
-            <h1 className="text-2xl font-light tracking-wide" style={{ color: TEXT_DARK }}>
+            <h1 className="text-2xl font-light tracking-wide" style={{ color: TEXT_GOLD }}>
               သင့်အမြင်ကို မျှဝေပါ
             </h1>
-            <p className="text-sm mt-1.5 font-light tracking-wider opacity-70" style={{ color: TEXT_DARK }}>
+            <p className="text-sm mt-1.5 font-light tracking-wider" style={{ color: TEXT_GOLD }}>
               ကျွန်ုပ်တို့ကို အကောင်းဆုံးဖန်တီးပေးပါ
             </p>
           </div>
         </div>
 
         {/* Progress Bar - Clean */}
-        <div className="sticky top-0 z-10 border-b" style={{ backgroundColor: PRIMARY, borderColor: PRIMARY_DARK }}>
+        <div className="sticky top-0 z-10 border-b" style={{ backgroundColor: PRIMARY_DARK, borderColor: PRIMARY_LIGHT }}>
           <div className="mx-auto max-w-2xl px-6 py-3.5">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-medium tracking-wider" style={{ color: TEXT_DARK }}>
+                <span className="text-xs font-medium tracking-wider" style={{ color: TEXT_GOLD }}>
                   {answeredCount} / {QUESTIONS.length}
                 </span>
-                <div className="w-32 h-1 rounded-full bg-white/40 overflow-hidden">
+                <div className="w-32 h-1 rounded-full overflow-hidden" style={{ backgroundColor: PROGRESS_BG }}>
                   <div
-                    className="h-full rounded-full transition-all duration-500 ease-out"
-                    style={{ width: `${progress * 100}%`, backgroundColor: TEXT_DARK }}
+                    className="h-full rounded-full"
+                    style={{ width: `${progress * 100}%`, backgroundColor: TEXT_GOLD }}
                   />
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                {QUESTIONS.map((q, i) => (
-                  <div
-                    key={i}
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      isAnswered(q) ? 'bg-black' : 'bg-white/40'
-                    }`}
-                  />
-                ))}
+                {QUESTIONS.map((q, i) => {
+                  const isAnswered_q = q.id === "location" ? isLocationAnswered() : isAnswered(q);
+                  return (
+                    <div
+                      key={i}
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        isAnswered_q ? 'bg-[#fcb335]' : 'bg-[#fcb335]/30'
+                      }`}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Questions - Clean Cards */}
+        {/* Questions - Dark/Gray Cards */}
         <div className="mx-auto max-w-2xl px-4 py-8">
           <div className="space-y-3">
-            {QUESTIONS.map((q, i) => (
-              <div
-                key={q.id}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 transition-all duration-200 hover:bg-white/15 border border-white/10"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="mt-1">
-                    {isAnswered(q) ? (
-                      <CheckCircle2 size={16} className="text-black" />
-                    ) : (
-                      <Circle size={16} className="text-black/30" />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <QuestionCard
-                      index={i}
-                      question={q}
-                      answer={answers[q.id]}
-                      onAnswer={(val: any) => setAnswer(q.id, val)}
-                      availableOptions={
-                        q.id === "region" 
-                          ? Object.keys(REGIONS_AND_STATES)
-                          : q.id === "township"
-                          ? availableTownships
-                          : []
-                      }
-                      totalQuestions={QUESTIONS.length}
-                    />
+            {QUESTIONS.map((q, i) => {
+              const isAnswered_q = q.id === "location" ? isLocationAnswered() : isAnswered(q);
+              return (
+                <div
+                  key={q.id}
+                  className="rounded-xl p-5 border"
+                  style={{
+                    backgroundColor: CARD_BG,
+                    borderColor: BORDER_COLOR,
+                  }}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1">
+                      {isAnswered_q ? (
+                        <CheckCircle2 size={16} style={{ color: TEXT_GOLD }} />
+                      ) : (
+                        <Circle size={16} style={{ color: TEXT_GOLD }} />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <QuestionCard
+                        index={i}
+                        question={q}
+                        answer={answers}
+                        onAnswer={(id: string, val: any) => setAnswer(id, val)}
+                        availableOptions={
+                          q.id === "location" 
+                            ? Object.keys(REGIONS_AND_STATES)
+                            : []
+                        }
+                        availableTownships={availableTownships}
+                        totalQuestions={QUESTIONS.length}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Submit Button */}
@@ -220,19 +237,19 @@ export default function SurveyLanding() {
             <button
               disabled={!allAnswered}
               onClick={handleSubmit}
-              className="w-full py-3.5 px-6 text-sm font-medium tracking-wide transition-all duration-200 rounded-xl flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-6 text-sm font-medium tracking-wide rounded-xl flex items-center justify-center gap-2"
               style={{
-                backgroundColor: allAnswered ? TEXT_DARK : "rgba(0,0,0,0.2)",
-                color: allAnswered ? PRIMARY : "rgba(0,0,0,0.4)",
+                backgroundColor: allAnswered ? TEXT_GOLD : "#1A214A",
+                color: allAnswered ? PRIMARY : "rgba(252, 179, 53, 0.5)",
                 cursor: allAnswered ? "pointer" : "default",
-                border: allAnswered ? "none" : "1px solid rgba(0,0,0,0.1)",
+                border: allAnswered ? "none" : `1px solid ${BORDER_COLOR}`,
               }}
             >
               တင်သွင်းမည်
-              <ChevronRight size={18} className={allAnswered ? "opacity-100" : "opacity-30"} />
+              <ChevronRight size={18} className={allAnswered ? "opacity-100" : "opacity-50"} />
             </button>
             {!allAnswered && (
-              <p className="text-xs text-center mt-3 tracking-wider text-black/50">
+              <p className="text-xs text-center mt-3 tracking-wider" style={{ color: TEXT_GOLD }}>
                 မေးခွန်းအားလုံးကို ဖြေဆိုပြီးမှ တင်သွင်းပါ
               </p>
             )}

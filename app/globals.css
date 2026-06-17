@@ -46,39 +46,39 @@
 }
 
 :root {
-    --background: #F3BE65;
-    --foreground: #2D1B00;
-    --card: #ffffff;
-    --card-foreground: #2D1B00;
-    --popover: #ffffff;
-    --popover-foreground: #2D1B00;
-    --primary: #F3BE65;
-    --primary-foreground: #2D1B00;
-    --secondary: #D4A04A;
-    --secondary-foreground: #2D1B00;
-    --muted: #f5f0eb;
-    --muted-foreground: #5C3D1A;
-    --accent: #F3BE65;
-    --accent-foreground: #2D1B00;
+    --background: #262F65;
+    --foreground: #fcb335;
+    --card: #2A346B;
+    --card-foreground: #fcb335;
+    --popover: #2A346B;
+    --popover-foreground: #fcb335;
+    --primary: #262F65;
+    --primary-foreground: #fcb335;
+    --secondary: #1A214A;
+    --secondary-foreground: #fcb335;
+    --muted: #2A346B;
+    --muted-foreground: #fcb335;
+    --accent: #3A4590;
+    --accent-foreground: #fcb335;
     --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #D4A04A;
-    --input: #D4A04A;
-    --ring: #F3BE65;
+    --destructive-foreground: #fcb335;
+    --border: rgba(252, 179, 53, 0.15);
+    --input: rgba(252, 179, 53, 0.15);
+    --ring: #fcb335;
     --radius: 0.625rem;
-    --chart-1: #F3BE65;
-    --chart-2: #D4A04A;
-    --chart-3: #B8832A;
-    --chart-4: #F8D49A;
-    --chart-5: #2D1B00;
-    --sidebar: #ffffff;
-    --sidebar-foreground: #2D1B00;
-    --sidebar-primary: #F3BE65;
-    --sidebar-primary-foreground: #2D1B00;
-    --sidebar-accent: #F3BE65;
-    --sidebar-accent-foreground: #2D1B00;
-    --sidebar-border: #D4A04A;
-    --sidebar-ring: #F3BE65;
+    --chart-1: #fcb335;
+    --chart-2: #d49a2a;
+    --chart-3: #b8831a;
+    --chart-4: #f5d080;
+    --chart-5: #262F65;
+    --sidebar: #1A214A;
+    --sidebar-foreground: #fcb335;
+    --sidebar-primary: #262F65;
+    --sidebar-primary-foreground: #fcb335;
+    --sidebar-accent: #3A4590;
+    --sidebar-accent-foreground: #fcb335;
+    --sidebar-border: rgba(252, 179, 53, 0.1);
+    --sidebar-ring: #fcb335;
 }
 
 @layer base {
@@ -100,40 +100,36 @@
 }
 
 @layer utilities {
-  /* ROYAL Signature Brand Colors */
+  /* Gold Text Colors */
   .text-royal-gold {
-    color: #F3BE65;
-    text-shadow: 0 0 20px rgba(243, 190, 101, 0.3);
+    color: #fcb335;
+    text-shadow: 0 0 20px rgba(252, 179, 53, 0.3);
   }
   
   .text-royal-dark {
-    color: #2D1B00;
+    color: #262F65;
   }
   
-  /* Custom gold colors - F3BE65 */
+  /* Custom colors */
   .bg-primary-custom {
-    background-color: #F3BE65;
+    background-color: #262F65;
   }
   
   .text-primary-custom {
-    color: #F3BE65;
+    color: #fcb335;
   }
   
   .border-primary-custom {
-    border-color: #F3BE65;
+    border-color: #fcb335;
   }
   
-  /* Gold gradient backgrounds */
-  .bg-gold-gradient {
-    background: linear-gradient(135deg, #F3BE65 0%, #D4A04A 50%, #B8832A 100%);
-  }
-  
+  /* Background utilities */
   .bg-gold-subtle {
-    background: linear-gradient(135deg, rgba(243, 190, 101, 0.1) 0%, rgba(212, 160, 74, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(252, 179, 53, 0.1) 0%, rgba(212, 160, 74, 0.05) 100%);
   }
   
   .text-gold-gradient {
-    background: linear-gradient(135deg, #F3BE65 0%, #D4A04A 100%);
+    background: linear-gradient(135deg, #fcb335 0%, #d49a2a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -141,24 +137,24 @@
   
   /* Glass morphism */
   .glass-luxury {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(42, 52, 107, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(243, 190, 101, 0.3);
+    border: 1px solid rgba(252, 179, 53, 0.15);
   }
   
   .glass-royal {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(243, 190, 101, 0.15);
+    border: 1px solid rgba(252, 179, 53, 0.08);
   }
   
-  /* Gold border glow */
+  /* Glow effects */
   .glow-gold {
-    box-shadow: 0 0 20px rgba(243, 190, 101, 0.3);
+    box-shadow: 0 0 20px rgba(252, 179, 53, 0.15);
   }
   
   .glow-gold-hover:hover {
-    box-shadow: 0 0 30px rgba(243, 190, 101, 0.5);
+    box-shadow: 0 0 30px rgba(252, 179, 53, 0.25);
     transition: all 0.3s ease;
   }
   
@@ -175,24 +171,6 @@
     font-weight: 300;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-  }
-  
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f5f0eb;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #F3BE65;
-    border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #D4A04A;
   }
   
   /* Font imports */

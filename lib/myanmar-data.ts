@@ -1,109 +1,105 @@
-// lib/myanmar-data.ts
-
 export const REGIONS_AND_STATES = {
-  "Yangon Region": [
-    "Ahlone Township", "Bahan Township", "Botataung Township", "Dagon Seikkan Township",
-    "Dala Township", "Dawbon Township", "East Dagon Township", "Hlaing Township",
-    "Hlaingthaya Township", "Insein Township", "Kamarut Township", "Kyauktada Township",
-    "Kyimyindaing Township", "Lanmadaw Township", "Latha Township", "Mayangone Township",
-    "Mingaladon Township", "North Dagon Township", "North Okkalapa Township", "Pabedan Township",
-    "Pazundaung Township", "Sanchaung Township", "Seikkan Township", "South Dagon Township",
-    "South Okkalapa Township", "Tamwe Township", "Thingangyun Township", "Yankin Township",
-    "Hlegu Township", "Taikkyi Township", "Hmawbi Township", "Myaungdaga Township",
-    "Kawhmu Township", "Kayan Township", "Kungyangon Township", "Kyauktan Township",
-    "Seikgyikanaungto Township", "Thanlyin Township", "Thongwa Township", "Twante Township"
+  "ရန်ကုန်တိုင်းဒေသကြီး": [
+    "အလုံမြို့နယ်", "ဗဟန်းမြို့နယ်", "ဗိုလ်တထောင်မြို့နယ်", "ဒဂုံဆိပ်ကမ်းမြို့နယ်",
+    "ဒလမြို့နယ်", "ဒေါဘုံမြို့နယ်", "အရှေ့ဒဂုံမြို့နယ်", "လှိုင်မြို့နယ်",
+    "လှိုင်သာယာမြို့နယ်", "အင်းစိန်မြို့နယ်", "ကမာရွတ်မြို့နယ်", "ကျောက်တံတားမြို့နယ်",
+    "ကြည့်မြင်တိုင်မြို့နယ်", "လမ်းမတော်မြို့နယ်", "လသာမြို့နယ်", "မရမ်းကုန်းမြို့နယ်",
+    "မင်္ဂလာဒုံမြို့နယ်", "မြောက်ဒဂုံမြို့နယ်", "မြောက်ဥက္ကလာပမြို့နယ်", "ပုဇွန်တောင်မြို့နယ်",
+    "ပါဠိမြို့နယ်", "စမ်းချောင်းမြို့နယ်", "ဆိပ်ကမ်းမြို့နယ်", "တောင်ဒဂုံမြို့နယ်",
+    "တောင်ဥက္ကလာပမြို့နယ်", "တာမွေမြို့နယ်", "သင်္ဃန်းကျွန်းမြို့နယ်", "ရန်ကင်းမြို့နယ်",
+    "လှည်းကူးမြို့နယ်", "တိုက်ကြီးမြို့နယ်", "မှော်ဘီမြို့နယ်", "မြောင်းမြမြို့နယ်",
+    "ကော့မှူးမြို့နယ်", "ခရမ်းမြို့နယ်", "ကွမ်းခြံကုန်းမြို့နယ်", "ကျောက်တန်းမြို့နယ်",
+    "ဆိပ်ကြီးခနောင်တိုမြို့နယ်", "သန်လျင်မြို့နယ်", "သုံးခွမြို့နယ်", "တွံတေးမြို့နယ်"
   ],
-  "Mandalay Region": [
-    "Aungmyaythazan Township", "Chanayethazan Township", "Chanmyathazi Township",
-    "Mahaaungmyay Township", "Patheingyi Township", "Pyigyidagun Township", "Amarapura Township",
-    "Singu Township", "Madaya Township", "Pyin Oo Lwin Township", "Mogoke Township",
-    "Kyaukpadaung Township", "Myingyan Township", "Natogyi Township", "Nganzun Township",
-    "Taungtha Township", "Meiktila Township", "Mahlaing Township", "Thazi Township",
-    "Wundwin Township", "Yamethin Township", "Pyawbwe Township", "Kyaukse Township",
-    "Sintgaing Township", "Tada-U Township", "Ngazun Township"
+  "မန္တလေးတိုင်းဒေသကြီး": [
+    "အောင်မြေသာစံမြို့နယ်", "ချမ်းအေးသာစံမြို့နယ်", "ချမ်းမြသာစံမြို့နယ်",
+    "မဟာအောင်မြေမြို့နယ်", "ပုသိမ်ကြီးမြို့နယ်", "ပြည်ကြီးတံခွန်မြို့နယ်", "အမရပူရမြို့နယ်",
+    "စဉ့်ကူးမြို့နယ်", "မတ္တရာမြို့နယ်", "ပြင်ဦးလွင်မြို့နယ်", "မိုးကုတ်မြို့နယ်",
+    "ကျောက်ပန်းတောင်းမြို့နယ်", "မြင်းခြံမြို့နယ်", "နွားထိုးကြီးမြို့နယ်", "ငါန်းဇွန်မြို့နယ်",
+    "တောင်သာမြို့နယ်", "မိတ္ထီလာမြို့နယ်", "မလှိုင်မြို့နယ်", "သာစည်မြို့နယ်",
+    "ဝမ်းတွင်းမြို့နယ်", "ရမည်းသင်းမြို့နယ်", "ပျော်ဘွယ်မြို့နယ်", "ကျောက်ဆည်မြို့နယ်",
+    "စဉ့်ကိုင်မြို့နယ်", "တံတားဦးမြို့နယ်", "ငါန်းဇွန်မြို့နယ်"
   ],
-  "Shan State": [
-    "Taunggyi Township", "Hopong Township", "Hsi Hseng Township", "Kalaw Township",
-    "Lawksawk Township", "Nyaungshwe Township", "Pekon Township", "Pinlaung Township",
-    "Ywangan Township", "Lashio Township", "Hsenwi Township", "Mongyai Township",
-    "Tangyan Township", "Kyaukme Township", "Hsipaw Township", "Mongmit Township",
-    "Namtu Township", "Nawnghkio Township", "Kunlong Township", "Tachileik Township"
+  "ရှမ်းပြည်နယ်": [
+    "တောင်ကြီးမြို့နယ်", "ဟိုပုံးမြို့နယ်", "ဆီဆိုင်မြို့နယ်", "ကလောမြို့နယ်",
+    "ရပ်စောက်မြို့နယ်", "ညောင်ရွှေမြို့နယ်", "ဖယ်ခုံမြို့နယ်", "ပင်းလောင်းမြို့နယ်",
+    "ရွာငံမြို့နယ်", "လားရှိုးမြို့နယ်", "သိန္နီမြို့နယ်", "မိုင်းရိုင်မြို့နယ်",
+    "တန့်ယန်းမြို့နယ်", "ကျောက်မဲမြို့နယ်", "သီပေါမြို့နယ်", "မိုင်းမိတ်မြို့နယ်",
+    "နမ္မတူမြို့နယ်", "နောင်ချိုမြို့နယ်", "ကွန်လောင်မြို့နယ်", "တာချီလိတ်မြို့နယ်"
   ],
-  "Naypyidaw Union Territory": [
-    "Zabuthiri Township", "Pyinmana Township", "Lewe Township", "Tatkon Township",
-    "Ottarathiri Township", "Pobbathiri Township", "Dekkhinathiri Township"
+  "နေပြည်တော်": [
+    "ဇမ္ဗူသီရိမြို့နယ်", "ပျဉ်းမနားမြို့နယ်", "လယ်ဝေးမြို့နယ်", "တပ်ကုန်းမြို့နယ်",
+    "ဥတ္တရသီရိမြို့နယ်", "ပုဗ္ဗသီရိမြို့နယ်", "ဒက္ခိဏသီရိမြို့နယ်"
   ],
-  "Ayeyarwady Region": [
-    "Pathein Township", "Kyaunggon Township", "Thabaung Township", "Ngapudaw Township",
-    "Myaungmya Township", "Einme Township", "Wakema Township", "Kangyidaunt Township",
-    "Mawlamyinegyunn Township", "Labutta Township", "Pyapon Township", "Bogale Township",
-    "Kyaiklat Township", "Dedaye Township", "Hinthada Township", "Zalun Township",
-    "Lemyethna Township", "Ingapu Township", "Myanaung Township", "Kyangin Township"
+  "ဧရာဝတီတိုင်းဒေသကြီး": [
+    "ပုသိမ်မြို့နယ်", "ကျောင်းကုန်းမြို့နယ်", "သာပေါင်းမြို့နယ်", "ငပုတောမြို့နယ်",
+    "မြောင်းမြမြို့နယ်", "အိမ်မဲမြို့နယ်", "ဝါးခယ်မမြို့နယ်", "ကန်ကြီးထောင်မြို့နယ်",
+    "မော်လမြိုင်ကျွန်းမြို့နယ်", "လပွတ္တာမြို့နယ်", "ဖျာပုံမြို့နယ်", "ဘိုကလေးမြို့နယ်",
+    "ကျိုက်လတ်မြို့နယ်", "ဒေးဒရဲမြို့နယ်", "ဟင်္သာတမြို့နယ်", "ဇလွန်မြို့နယ်",
+    "လေးမျက်နှာမြို့နယ်", "အင်္ဂပူမြို့နယ်", "မြန်အောင်မြို့နယ်", "ကြံခင်းမြို့နယ်"
   ],
-  "Bago Region": [
-    "Bago Township", "Daik-U Township", "Kawa Township", "Nyaunglebin Township",
-    "Shwegyin Township", "Thanatpin Township", "Waw Township", "Pyay Township",
-    "Paukkaung Township", "Paungde Township", "Shwedaung Township", "Thegon Township",
-    "Gyobingauk Township", "Letpadan Township", "Minhla Township", "Monyo Township",
-    "Okpho Township", "Tharrawaddy Township", "Nattalin Township", "Zigon Township"
+  "ပဲခူးတိုင်းဒေသကြီး": [
+    "ပဲခူးမြို့နယ်", "ဒိုက်ဦးမြို့နယ်", "ကဝမြို့နယ်", "ညောင်လေးပင်မြို့နယ်",
+    "ရွှေကျင်မြို့နယ်", "သနပ်ပင်မြို့နယ်", "ဝေါမြို့နယ်", "ပြည်မြို့နယ်",
+    "ပေါက်ခေါင်းမြို့နယ်", "ပေါင်းတည်မြို့နယ်", "ရွှေတောင်မြို့နယ်", "သေဌာန်းမြို့နယ်",
+    "ကျောက်ပုံမြို့နယ်", "လက်ပံတန်းမြို့နယ်", "မင်းလှမြို့နယ်", "မိုးညိုမြို့နယ်",
+    "အုတ်ဖိုမြို့နယ်", "သာယာဝတီမြို့နယ်", "နတ်တလင်းမြို့နယ်", "ဇီးကုန်းမြို့နယ်"
   ],
-  "Magway Region": [
-    "Magway Township", "Yenangyaung Township", "Chauk Township", "Myothit Township",
-    "Natmauk Township", "Taungdwingyi Township", "Pakokku Township", "Seikphyu Township",
-    "Myaing Township", "Pauk Township", "Yesagyo Township", "Gangaw Township",
-    "Tilin Township", "Saw Township", "Minbu Township", "Pwintbyu Township",
-    "Salin Township", "Sidoktaya Township", "Ngape Township"
+  "မကွေးတိုင်းဒေသကြီး": [
+    "မကွေးမြို့နယ်", "ရေနံချောင်းမြို့နယ်", "ချောက်မြို့နယ်", "မြို့သစ်မြို့နယ်",
+    "နတ်မောက်မြို့နယ်", "တောင်တွင်းကြီးမြို့နယ်", "ပခုက္ကူမြို့နယ်", "ဆိပ်ဖြူမြို့နယ်",
+    "မြိုင်မြို့နယ်", "ပေါက်မြို့နယ်", "ရေစကြိုမြို့နယ်", "ဂန့်ဂေါမြို့နယ်",
+    "ထီလင်းမြို့နယ်", "စောမြို့နယ်", "မင်းဘူးမြို့နယ်", "ပွင့်ဖြူမြို့နယ်",
+    "စလင်းမြို့နယ်", "စကုမြို့နယ်", "ငဖဲမြို့နယ်"
   ],
-  "Sagaing Region": [
-    "Sagaing Township", "Myinmu Township", "Monywa Township", "Ayadaw Township",
-    "Budalin Township", "Chaung-U Township", "Kani Township", "Khin-U Township",
-    "Shwebo Township", "Kyunhla Township", "Tabayin Township", "Ye-U Township",
-    "Kale Township", "Kalewa Township", "Mingin Township", "Tamu Township",
-    "Homalin Township", "Lahe Township", "Leshi Township", "Nanyun Township"
+  "စစ်ကိုင်းတိုင်းဒေသကြီး": [
+    "စစ်ကိုင်းမြို့နယ်", "မြင်းမူမြို့နယ်", "မုံရွာမြို့နယ်", "အရာတော်မြို့နယ်",
+    "ဘုတလင်မြို့နယ်", "ချောင်းဦးမြို့နယ်", "ကနီမြို့နယ်", "ခင်ဦးမြို့နယ်",
+    "ရွှေဘိုမြို့နယ်", "ကျွန်းလှမြို့နယ်", "ဒီပဲယင်းမြို့နယ်", "ရေဦးမြို့နယ်",
+    "ကလေးမြို့နယ်", "ကလေးဝမြို့နယ်", "မင်းကင်းမြို့နယ်", "တမူးမြို့နယ်",
+    "ဟုမ္မလင်းမြို့နယ်", "လဟယ်မြို့နယ်", "လေရှီးမြို့နယ်", "နန်းယွန်းမြို့နယ်"
   ],
-  "Tanintharyi Region": [
-    "Dawei Township", "Launglon Township", "Thayetchaung Township", "Yebyu Township",
-    "Myeik Township", "Kyunsu Township", "Palaw Township", "Tanintharyi Township",
-    "Kawthaung Township", "Bokpyin Township"
+  "တနင်္သာရီတိုင်းဒေသကြီး": [
+    "ထားဝယ်မြို့နယ်", "လောင်းလုံမြို့နယ်", "သရက်ချောင်းမြို့နယ်", "ရေဖြူမြို့နယ်",
+    "မြိတ်မြို့နယ်", "ကျွန်းစုမြို့နယ်", "ပုလောမြို့နယ်", "တနင်္သာရီမြို့နယ်",
+    "ကော့သောင်းမြို့နယ်", "ဘုတ်ပြင်းမြို့နယ်"
   ],
-  "Kayin State": [
-    "Hpa-an Township", "Hlaingbwe Township", "Thandaunggyi Township", "Kawkareik Township",
-    "Kyain Seikgyi Township", "Myawaddy Township"
+  "ကရင်ပြည်နယ်": [
+    "ဘားအံမြို့နယ်", "လှိုင်းဘွဲ့မြို့နယ်", "သံတောင်ကြီးမြို့နယ်", "ကော့ကရိတ်မြို့နယ်",
+    "ကြာအင်းဆိပ်ကြီးမြို့နယ်", "မြဝတီမြို့နယ်"
   ],
-  "Mon State": [
-    "Mawlamyine Township", "Chaungzon Township", "Kyaikmaraw Township", "Mudon Township",
-    "Thanbyuzayat Township", "Ye Township", "Bilin Township", "Kyaikto Township",
-    "Paung Township"
+  "မွန်ပြည်နယ်": [
+    "မော်လမြိုင်မြို့နယ်", "ချောင်းဆုံမြို့နယ်", "ကျိုက်မရောမြို့နယ်", "မုဒုံမြို့နယ်",
+    "သံဖြူဇရပ်မြို့နယ်", "ရေးမြို့နယ်", "ဘီးလင်းမြို့နယ်", "ကျိုက်ထိုမြို့နယ်",
+    "ပေါင်မြို့နယ်"
   ],
-  "Rakhine State": [
-    "Sittwe Township", "Pauktaw Township", "Ponnagyun Township", "Rathedaung Township",
-    "Mrauk-U Township", "Kyauktaw Township", "Minbya Township", "Myebon Township",
-    "Ann Township", "Thandwe Township", "Toungup Township", "Gwa Township",
-    "Maungdaw Township", "Buthidaung Township"
+  "ရခိုင်ပြည်နယ်": [
+    "စစ်တွေမြို့နယ်", "ပေါက်တောမြို့နယ်", "ပုဏ္ဏားကျွန်းမြို့နယ်", "ရသေ့တောင်မြို့နယ်",
+    "မြောက်ဦးမြို့နယ်", "ကျောက်တော်မြို့နယ်", "မင်းပြားမြို့နယ်", "မြေပုံမြို့နယ်",
+    "အမ်းမြို့နယ်", "သံတွဲမြို့နယ်", "တောင်ကုတ်မြို့နယ်", "ဂွမြို့နယ်",
+    "မောင်တောမြို့နယ်", "ဘူးသီးတောင်မြို့နယ်"
   ],
-  "Kachin State": [
-    "Myitkyina Township", "Waingmaw Township", "Injangyang Township", "Tanai Township",
-    "Chipwi Township", "Tsawlaw Township", "Bhamo Township", "Mansi Township",
-    "Momauk Township", "Shwegu Township", "Mohnyin Township", "Mogaung Township",
-    "Hpakant Township", "Putao Township", "Machanbaw Township", "Nawngmun Township",
-    "Sumprabum Township"
+  "ကချင်ပြည်နယ်": [
+    "မြစ်ကြီးနားမြို့နယ်", "ဝိုင်းမော်မြို့နယ်", "အင်ဂျန်းယန်မြို့နယ်", "တနိုင်းမြို့နယ်",
+    "ချီဖွေမြို့နယ်", "ဆော့ဆော်မြို့နယ်", "ဗန်းမော်မြို့နယ်", "မံစီမြို့နယ်",
+    "မိုးမောက်မြို့နယ်", "ရွှေကူမြို့နယ်", "မိုးညှင်းမြို့နယ်", "မိုးကောင်းမြို့နယ်",
+    "ဖားကန့်မြို့နယ်", "ပူတာအိုမြို့နယ်", "မချမ်းဘောမြို့နယ်", "နောင်မွန်းမြို့နယ်",
+    "ဆွမ်ပရာဘွမ်မြို့နယ်"
   ],
-  "Chin State": [
-    "Hakha Township", "Falam Township", "Tedim Township", "Tonzang Township",
-    "Matupi Township", "Paletwa Township", "Mindat Township", "Kanpetlet Township"
+  "ချင်းပြည်နယ်": [
+    "ဟားခါးမြို့နယ်", "ဖလမ်းမြို့နယ်", "တီးတိန်မြို့နယ်", "တွန်းဇောင်မြို့နယ်",
+    "မတူပီမြို့နယ်", "ပလက်ဝမြို့နယ်", "မင်းတပ်မြို့နယ်", "ကန်ပက်လက်မြို့နယ်"
   ],
-  "Kayah State": [
-    "Loikaw Township", "Demoso Township", "Hpruso Township", "Shadaw Township",
-    "Bawlakhe Township", "Mese Township"
+  "ကယားပြည်နယ်": [
+    "လွိုင်ကော်မြို့နယ်", "ဒီးမော့ဆိုမြို့နယ်", "ဖရူးဆိုးမြို့နယ်", "ရှားတောမြို့နယ်",
+    "ဘောလခဲမြို့နယ်", "မယ်စဲ့မြို့နယ်"
   ]
 };
 
-// Function to get townships by region
 export const getTownshipsByRegion = (region: string): string[] => {
   return REGIONS_AND_STATES[region as keyof typeof REGIONS_AND_STATES] || [];
 };
 
-// Get all regions/states list
 export const getRegionsList = (): string[] => {
   return Object.keys(REGIONS_AND_STATES);
 };

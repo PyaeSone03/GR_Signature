@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Gift, Phone } from "lucide-react";
 
-const PRIMARY = "#F3BE65";
-const TEXT_DARK = "#000000";
+const PRIMARY = "#262F65";
+const TEXT_GOLD = "#fcb335";
+const CARD_BG = "rgba(252, 179, 53, 0.06)";
+const BORDER_COLOR = "rgba(252, 179, 53, 0.15)";
 
 export default function ThankYouPage() {
   const router = useRouter();
@@ -17,7 +19,7 @@ export default function ThankYouPage() {
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <Image
-            src="/images/logo.png"
+            src="/images/logoo.png"
             alt="Logo"
             width={120}
             height={120}
@@ -27,44 +29,32 @@ export default function ThankYouPage() {
         </div>
 
         {/* Content */}
-        <p className="text-xs font-medium uppercase tracking-wider text-black/50">
+        <p className="text-xs font-medium uppercase tracking-wider" style={{ color: TEXT_GOLD }}>
           Thank You
         </p>
         
-        <h1 className="mt-3 text-2xl font-light tracking-wide" style={{ color: TEXT_DARK }}>
+        <h1 className="mt-3 text-2xl font-light tracking-wide" style={{ color: TEXT_GOLD }}>
           သင့်ရဲ့အကြံပြုချက်ကို ကျေးဇူးတင်ပါသည်
         </h1>
         
-        <div className="w-12 h-0.5 mx-auto mt-4" style={{ backgroundColor: TEXT_DARK }} />
+        <div className="w-12 h-0.5 mx-auto mt-4" style={{ backgroundColor: TEXT_GOLD }} />
         
         {/* Reward Message */}
-        <div className="mt-6 p-4 rounded-xl bg-black/5 border border-black/10">
+        <div className="mt-6 p-4 rounded-xl border" style={{ 
+          backgroundColor: CARD_BG,
+          borderColor: BORDER_COLOR 
+        }}>
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Gift size={20} className="text-black/70" />
-           
+            <Gift size={20} style={{ color: TEXT_GOLD }} />
           </div>
-          <p className="text-sm text-black/80 font-medium">
-            We've sent you 1,000 Kyats to your phone number
+          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+            သင့်ဖုန်းနံပါတ်သို့ ကျပ် ၁၀၀၀ ပေးပို့ထားပါသည်
           </p>
-          <div className="flex items-center justify-center gap-2 mt-2 text-xs text-black/50">
+          <div className="flex items-center justify-center gap-2 mt-2 text-xs" style={{ color: TEXT_GOLD }}>
             <Phone size={14} />
             <span>09XXXXXXX</span>
           </div>
         </div>
-
-        {/* Secondary Logo */}
-        <div className="flex justify-center mt-8">
-          <Image
-            src="/images/KVFont.png"
-            alt="KV Font Logo"
-            width={180}
-            height={180}
-            className="object-contain opacity-60"
-            priority
-          />
-        </div>
-
-       
       </div>
     </div>
   );
