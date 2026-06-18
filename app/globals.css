@@ -47,21 +47,21 @@
 
 :root {
     --background: #262F65;
-    --foreground: #fcb335;
+    --foreground: #ffffff;
     --card: #2A346B;
-    --card-foreground: #fcb335;
+    --card-foreground: #ffffff;
     --popover: #2A346B;
-    --popover-foreground: #fcb335;
+    --popover-foreground: #ffffff;
     --primary: #262F65;
-    --primary-foreground: #fcb335;
+    --primary-foreground: #ffffff;
     --secondary: #1A214A;
-    --secondary-foreground: #fcb335;
+    --secondary-foreground: #ffffff;
     --muted: #2A346B;
-    --muted-foreground: #fcb335;
+    --muted-foreground: #ffffff;
     --accent: #3A4590;
-    --accent-foreground: #fcb335;
+    --accent-foreground: #ffffff;
     --destructive: #ef4444;
-    --destructive-foreground: #fcb335;
+    --destructive-foreground: #ffffff;
     --border: rgba(252, 179, 53, 0.15);
     --input: rgba(252, 179, 53, 0.15);
     --ring: #fcb335;
@@ -72,11 +72,11 @@
     --chart-4: #f5d080;
     --chart-5: #262F65;
     --sidebar: #1A214A;
-    --sidebar-foreground: #fcb335;
+    --sidebar-foreground: #ffffff;
     --sidebar-primary: #262F65;
-    --sidebar-primary-foreground: #fcb335;
+    --sidebar-primary-foreground: #ffffff;
     --sidebar-accent: #3A4590;
-    --sidebar-accent-foreground: #fcb335;
+    --sidebar-accent-foreground: #ffffff;
     --sidebar-border: rgba(252, 179, 53, 0.1);
     --sidebar-ring: #fcb335;
 }

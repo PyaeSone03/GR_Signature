@@ -5,13 +5,14 @@ import { OptionPill } from "./OptionPill";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
-// Color constants with gold theme
+// Color constants
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
-const INPUT_BG = "rgba(252, 179, 53, 0.06)";
+const INPUT_BG = "rgba(255, 255, 255, 0.06)";
 const INPUT_BORDER = "rgba(252, 179, 53, 0.15)";
 const INPUT_FOCUS = "#fcb335";
 const SELECT_BG = "#2A346B";
-const PLACEHOLDER_COLOR = "rgba(252, 179, 53, 0.5)";
+const PLACEHOLDER_COLOR = "rgba(255, 255, 255, 0.5)";
 
 interface QuestionCardProps {
   index: number;
@@ -51,11 +52,11 @@ export function QuestionCard({
     return (
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm font-medium" style={{ color: TEXT_WHITE }}>
             {question.text}
           </p>
           {question.required && (
-            <span className="text-xs font-medium" style={{ color: TEXT_GOLD }}>
+            <span className="text-xs font-medium" style={{ color: TEXT_WHITE }}>
               REQUIRED
             </span>
           )}
@@ -70,7 +71,7 @@ export function QuestionCard({
             style={{
               backgroundColor: INPUT_BG,
               borderColor: INPUT_BORDER,
-              color: TEXT_GOLD,
+              color: TEXT_WHITE,
             }}
             onFocus={(e) => {
               e.target.style.borderColor = INPUT_FOCUS;
@@ -95,11 +96,11 @@ export function QuestionCard({
     return (
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm font-medium" style={{ color: TEXT_WHITE }}>
             {question.text}
           </p>
           {question.required && (
-            <span className="text-xs font-medium" style={{ color: TEXT_GOLD }}>
+            <span className="text-xs font-medium" style={{ color: TEXT_WHITE }}>
               REQUIRED
             </span>
           )}
@@ -114,7 +115,7 @@ export function QuestionCard({
               style={{
                 backgroundColor: INPUT_BG,
                 borderColor: INPUT_BORDER,
-                color: TEXT_GOLD,
+                color: TEXT_WHITE,
               }}
             >
               <SelectValue placeholder="ပြည်နယ် / တိုင်း ရွေးချယ်ပါ" />
@@ -124,7 +125,7 @@ export function QuestionCard({
               style={{
                 backgroundColor: SELECT_BG,
                 borderColor: INPUT_BORDER,
-                color: TEXT_GOLD,
+                color: TEXT_WHITE,
               }}
             >
               <SelectGroup>
@@ -133,7 +134,7 @@ export function QuestionCard({
                     key={opt} 
                     value={opt}
                     className="text-sm"
-                    style={{ color: TEXT_GOLD }}
+                    style={{ color: TEXT_WHITE }}
                   >
                     {opt}
                   </SelectItem>
@@ -154,7 +155,7 @@ export function QuestionCard({
               style={{
                 backgroundColor: INPUT_BG,
                 borderColor: INPUT_BORDER,
-                color: TEXT_GOLD,
+                color: TEXT_WHITE,
               }}
             >
               <SelectValue placeholder="မြို့နယ် ရွေးချယ်ပါ" />
@@ -164,7 +165,7 @@ export function QuestionCard({
               style={{
                 backgroundColor: SELECT_BG,
                 borderColor: INPUT_BORDER,
-                color: TEXT_GOLD,
+                color: TEXT_WHITE,
               }}
             >
               <SelectGroup>
@@ -173,7 +174,7 @@ export function QuestionCard({
                     key={opt} 
                     value={opt}
                     className="text-sm"
-                    style={{ color: TEXT_GOLD }}
+                    style={{ color: TEXT_WHITE }}
                   >
                     {opt}
                   </SelectItem>
@@ -191,11 +192,11 @@ export function QuestionCard({
     return (
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm font-medium" style={{ color: TEXT_WHITE }}>
             {question.text}
           </p>
           {question.required && (
-            <span className="text-xs font-medium" style={{ color: TEXT_GOLD }}>
+            <span className="text-xs font-medium" style={{ color: TEXT_WHITE }}>
               REQUIRED
             </span>
           )}
@@ -209,7 +210,7 @@ export function QuestionCard({
           style={{
             backgroundColor: INPUT_BG,
             borderColor: INPUT_BORDER,
-            color: TEXT_GOLD,
+            color: TEXT_WHITE,
           }}
           onFocus={(e) => {
             e.target.style.borderColor = INPUT_FOCUS;
@@ -227,11 +228,11 @@ export function QuestionCard({
     return (
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm font-medium" style={{ color: TEXT_WHITE }}>
             {question.text}
           </p>
           {question.required && (
-            <span className="text-xs font-medium" style={{ color: TEXT_GOLD }}>
+            <span className="text-xs font-medium" style={{ color: TEXT_WHITE }}>
               REQUIRED
             </span>
           )}

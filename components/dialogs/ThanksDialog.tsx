@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const PRIMARY = "#262F65";
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
 const BORDER_COLOR = "rgba(252, 179, 53, 0.15)";
 
@@ -29,11 +30,11 @@ export function ThanksDialog({ onContinue }: ThanksDialogProps) {
               <CheckCircle2 size={40} style={{ color: TEXT_GOLD }} />
             </div>
           </div>
-          <h2 className="text-2xl font-light tracking-wider text-center" style={{ color: TEXT_GOLD }}>
+          <h2 className="text-2xl font-light tracking-wider text-center" style={{ color: TEXT_WHITE }}>
             THANK YOU!
           </h2>
           <div className="w-12 h-0.5 mt-2" style={{ backgroundColor: TEXT_GOLD }} />
-          <p className="text-sm text-center mt-3" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm text-center mt-3" style={{ color: TEXT_WHITE }}>
             Your response has been recorded. We appreciate your feedback!
           </p>
         </div>
@@ -42,7 +43,7 @@ export function ThanksDialog({ onContinue }: ThanksDialogProps) {
         <div className="px-6 pb-8">
           <button
             onClick={onContinue}
-            className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:scale-[1.02]"
+            className="w-full py-3 px-6 text-sm font-medium tracking-wider rounded-xl"
             style={{
               backgroundColor: TEXT_GOLD,
               color: PRIMARY,

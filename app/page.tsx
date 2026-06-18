@@ -13,9 +13,9 @@ const PRIMARY = "#262F65";
 const PRIMARY_DARK = "#1A214A";
 const PRIMARY_LIGHT = "#3A4590";
 const CARD_BG = "#2A346B";
-const CARD_BG_HOVER = "#323D7A";
 const BORDER_COLOR = "rgba(252, 179, 53, 0.12)";
 const PROGRESS_BG = "rgba(252, 179, 53, 0.15)";
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
 
 const QUESTIONS = [
@@ -123,7 +123,7 @@ export default function SurveyLanding() {
   if (declined) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center" style={{ backgroundColor: PRIMARY }}>
-        <p style={{ color: TEXT_GOLD }}>ဆက်လက်လုပ်ဆောင်ရန် အသက် ၁၈ နှစ်ပြည့်ပြီးဖြစ်ရပါမည်။ နားလည်ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။</p>
+        <p style={{ color: TEXT_WHITE }}>ဆက်လက်လုပ်ဆောင်ရန် အသက် ၁၈ နှစ်ပြည့်ပြီးဖြစ်ရပါမည်။ နားလည်ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။</p>
       </div>
     );
   }
@@ -148,10 +148,10 @@ export default function SurveyLanding() {
                 priority
               />
             </div>
-            <h1 className="text-2xl font-light tracking-wide" style={{ color: TEXT_GOLD }}>
+            <h1 className="text-2xl font-light tracking-wide" style={{ color: TEXT_WHITE }}>
               သင့်အမြင်ကို မျှဝေပါ
             </h1>
-            <p className="text-sm mt-1.5 font-light tracking-wider" style={{ color: TEXT_GOLD }}>
+            <p className="text-sm mt-1.5 font-light tracking-wider" style={{ color: TEXT_WHITE }}>
               ကျွန်ုပ်တို့ကို အကောင်းဆုံးဖန်တီးပေးပါ
             </p>
           </div>
@@ -162,13 +162,13 @@ export default function SurveyLanding() {
           <div className="mx-auto max-w-2xl px-6 py-3.5">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-medium tracking-wider" style={{ color: TEXT_GOLD }}>
+                <span className="text-xs font-medium tracking-wider" style={{ color: TEXT_WHITE }}>
                   {answeredCount} / {QUESTIONS.length}
                 </span>
                 <div className="w-32 h-1 rounded-full overflow-hidden" style={{ backgroundColor: PROGRESS_BG }}>
                   <div
                     className="h-full rounded-full"
-                    style={{ width: `${progress * 100}%`, backgroundColor: TEXT_GOLD }}
+                    style={{ width: `${progress * 100}%`, backgroundColor: TEXT_WHITE }}
                   />
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function SurveyLanding() {
               className="w-full py-3.5 px-6 text-sm font-medium tracking-wide rounded-xl flex items-center justify-center gap-2"
               style={{
                 backgroundColor: allAnswered ? TEXT_GOLD : "#1A214A",
-                color: allAnswered ? PRIMARY : "rgba(252, 179, 53, 0.5)",
+                color: allAnswered ? PRIMARY : "rgba(255, 255, 255, 0.5)",
                 cursor: allAnswered ? "pointer" : "default",
                 border: allAnswered ? "none" : `1px solid ${BORDER_COLOR}`,
               }}
@@ -249,7 +249,7 @@ export default function SurveyLanding() {
               <ChevronRight size={18} className={allAnswered ? "opacity-100" : "opacity-50"} />
             </button>
             {!allAnswered && (
-              <p className="text-xs text-center mt-3 tracking-wider" style={{ color: TEXT_GOLD }}>
+              <p className="text-xs text-center mt-3 tracking-wider" style={{ color: TEXT_WHITE }}>
                 မေးခွန်းအားလုံးကို ဖြေဆိုပြီးမှ တင်သွင်းပါ
               </p>
             )}

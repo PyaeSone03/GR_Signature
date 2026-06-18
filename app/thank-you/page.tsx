@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { Gift, Phone } from "lucide-react";
 
 const PRIMARY = "#262F65";
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
 const CARD_BG = "rgba(252, 179, 53, 0.06)";
 const BORDER_COLOR = "rgba(252, 179, 53, 0.15)";
@@ -33,7 +34,7 @@ export default function ThankYouPage() {
           Thank You
         </p>
         
-        <h1 className="mt-3 text-2xl font-light tracking-wide" style={{ color: TEXT_GOLD }}>
+        <h1 className="mt-3 text-2xl font-light tracking-wide" style={{ color: TEXT_WHITE }}>
           သင့်ရဲ့အကြံပြုချက်ကို ကျေးဇူးတင်ပါသည်
         </h1>
         
@@ -47,7 +48,7 @@ export default function ThankYouPage() {
           <div className="flex items-center justify-center gap-2 mb-2">
             <Gift size={20} style={{ color: TEXT_GOLD }} />
           </div>
-          <p className="text-sm font-medium" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm font-medium" style={{ color: TEXT_WHITE }}>
             သင့်ဖုန်းနံပါတ်သို့ ကျပ် ၁၀၀၀ ပေးပို့ထားပါသည်
           </p>
           <div className="flex items-center justify-center gap-2 mt-2 text-xs" style={{ color: TEXT_GOLD }}>

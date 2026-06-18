@@ -7,6 +7,7 @@ import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/comp
 
 const PRIMARY = "#262F65";
 const PRIMARY_LIGHT = "#3A4590";
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
 const BORDER_COLOR = "rgba(252, 179, 53, 0.15)";
 
@@ -32,11 +33,11 @@ export function AgeGateDialog({ onConfirm, onDecline }: AgeGateDialogProps) {
               <AlertTriangle size={32} style={{ color: TEXT_GOLD }} />
             </div>
           </div>
-          <h2 className="text-xl font-light tracking-wider text-center" style={{ color: TEXT_GOLD }}>
+          <h2 className="text-xl font-light tracking-wider text-center" style={{ color: TEXT_WHITE }}>
             AGE VERIFICATION
           </h2>
           <div className="w-12 h-0.5 mt-2" style={{ backgroundColor: TEXT_GOLD }} />
-          <p className="text-sm text-center mt-3" style={{ color: TEXT_GOLD }}>
+          <p className="text-sm text-center mt-3" style={{ color: TEXT_WHITE }}>
             Please confirm you are 18 or older to continue.
           </p>
         </div>
@@ -45,7 +46,7 @@ export function AgeGateDialog({ onConfirm, onDecline }: AgeGateDialogProps) {
         <div className="px-6 pb-8 space-y-3">
           <button
             onClick={onConfirm}
-            className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:scale-[1.02]"
+            className="w-full py-3 px-6 text-sm font-medium tracking-wider rounded-xl"
             style={{
               backgroundColor: TEXT_GOLD,
               color: PRIMARY,
@@ -55,10 +56,10 @@ export function AgeGateDialog({ onConfirm, onDecline }: AgeGateDialogProps) {
           </button>
           <button
             onClick={onDecline}
-            className="w-full py-3 px-6 text-sm font-medium tracking-wider transition-all duration-200 rounded-xl hover:bg-white/5"
+            className="w-full py-3 px-6 text-sm font-medium tracking-wider rounded-xl"
             style={{
               backgroundColor: "transparent",
-              color: TEXT_GOLD,
+              color: TEXT_WHITE,
               border: `1px solid ${BORDER_COLOR}`,
             }}
           >

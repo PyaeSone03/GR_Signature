@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PRIMARY = "#262F65";
+const TEXT_WHITE = "#ffffff";
 const TEXT_GOLD = "#fcb335";
 
 interface OptionPillProps {
@@ -22,8 +23,8 @@ export function OptionPill({ label, selected, onClick }: OptionPillProps) {
           : ''
       }`}
       style={{
-        backgroundColor: selected ? '#fcb335' : 'rgba(252, 179, 53, 0.05)',
-        color: selected ? PRIMARY : TEXT_GOLD,
+        backgroundColor: selected ? '#fcb335' : 'rgba(255, 255, 255, 0.05)',
+        color: selected ? PRIMARY : TEXT_WHITE,
       }}
     >
       <span>{label}</span>
